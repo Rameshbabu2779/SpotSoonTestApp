@@ -27,7 +27,7 @@ public class SS_MainActivity extends AppCompatActivity {
         mSS_PagerAdapter = new SS_PagerAdapter(this);
         mViewPager.setAdapter(mSS_PagerAdapter);
 
-        //----onscroll init-----//
+        //----onscroll page change init-----//
         mViewPager.addOnPageChangeListener(onPageChangeListener);
 
 
