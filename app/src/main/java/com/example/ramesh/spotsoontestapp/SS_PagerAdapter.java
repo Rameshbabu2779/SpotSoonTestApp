@@ -56,7 +56,6 @@ public class SS_PagerAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
 
         //---- remove layout items----//
-
         container.removeView((LinearLayout)object);
     }
 
