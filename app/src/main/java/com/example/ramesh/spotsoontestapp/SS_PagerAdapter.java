@@ -1,6 +1,5 @@
 package com.example.ramesh.spotsoontestapp;
 
-
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -9,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public class SS_PagerAdapter extends PagerAdapter {
