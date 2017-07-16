@@ -8,13 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class SS_PagerAdapter extends PagerAdapter {
 
     Context mContext;
     LayoutInflater mLayoutInflater;
-
 
     public SS_PagerAdapter(SS_MainActivity ss_mainActivity) {
 
@@ -43,8 +46,12 @@ public class SS_PagerAdapter extends PagerAdapter {
         View aView=mLayoutInflater.inflate(R.layout.ss_image_list_item,container,false);
 
         ImageView aImageView=(ImageView)aView.findViewById(R.id.imageView);
+        TextView aTitleTxt=(TextView)aView.findViewById(R.id.titleTxt_id);
 
         aImageView.setImageResource(mResources[position]);
+        aTitleTxt.setText(TitleTxt[position]);
+
+        aImageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         container.addView(aView);
 
@@ -58,6 +65,24 @@ public class SS_PagerAdapter extends PagerAdapter {
         //---- remove layout items----//
         container.removeView((LinearLayout)object);
     }
+
+    String[] TitleTxt = {
+            "Google",
+            "Twitter",
+            "Windows",
+            "Bing",
+            "Itunes",
+            "Wordpress",
+            "Facebook",
+            "Twitter",
+            "Windows",
+            "Bing",
+            "Itunes",
+            "Wordpress",
+            "Facebook"
+
+    } ;
+
 
     //---- image list items----//
     int[] mResources = {
