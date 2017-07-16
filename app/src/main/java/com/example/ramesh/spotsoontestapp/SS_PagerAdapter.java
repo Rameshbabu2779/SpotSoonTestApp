@@ -66,6 +66,8 @@ public class SS_PagerAdapter extends PagerAdapter {
         container.removeView((LinearLayout)object);
     }
 
+
+    //---- title list items----//
     String[] TitleTxt = {
             "Google",
             "Twitter",
