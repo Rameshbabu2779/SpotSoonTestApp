@@ -16,17 +16,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by Ram on 13-07-2017.
+ * Created by Ram on 16-07-2017.
  */
 
 public class SS_PagerAdapter extends PagerAdapter {
 
-Context mContext;
+    Context mContext;
     LayoutInflater mLayoutInflater;
 
 
     public SS_PagerAdapter(SS_MainActivity ss_mainActivity) {
 
+        //---- init context and layoutinflater----//
         mContext=ss_mainActivity;
         mLayoutInflater=(LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -34,17 +35,20 @@ Context mContext;
 
     @Override
     public int getCount() {
+        //---- Image items count----//
         return mResources.length;
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
+        //---- linearlayout obj init----//
         return view == ((LinearLayout) object);
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
+        //---- Set values to layout items----//
         View aView=mLayoutInflater.inflate(R.layout.ss_image_list_item,container,false);
 
         ImageView aImageView=(ImageView)aView.findViewById(R.id.imageView);
@@ -59,9 +63,12 @@ Context mContext;
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
+
+        //---- remove layout items----//
         container.removeView((LinearLayout)object);
     }
 
+    //---- image list items----//
     int[] mResources = {
             R.mipmap.about_us,
             R.mipmap.image,
