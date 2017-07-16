@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 public class SS_MainActivity extends AppCompatActivity {
 
-
     ViewPager mViewPager;
     SS_PagerAdapter mSS_PagerAdapter;
     ImageView mLeftImg,mRightImg;
@@ -66,7 +65,6 @@ public class SS_MainActivity extends AppCompatActivity {
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
         }
-
         @Override
         public void onPageSelected(int position) {
 
@@ -91,7 +89,5 @@ public class SS_MainActivity extends AppCompatActivity {
 
         }
     };
-
-
 
 }
